@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "john_doe",
+      "email": "john@example.com",
+      "password": "hashed_password"
+    },
+    {
+      "id": "3f15",
+      "username": "zanguim",
+      "email": "leonelzanguim4@gmail.com",
+      "password": " "
+    },
+    {
+      "id": "393d",
+      "username": "Donzap",
+      "email": "Donzap@gmail.com",
+      "password": "01"
+    },
+    {
+      "id": "744f",
+      "username": "Gildas",
+      "email": "Gildas@gmail.com",
+      "password": "  "
+    }
+  ],
+  "customers": [
+    {
+      "id": "06da",
+      "name": "Leonel ZANGUIM DONGMO",
+      "email": "leonelzanguim4@gmail.com",
+      "phone": "654164155"
+    },
+    {
+      "id": "d8b1",
+      "name": "donzap",
+      "email": "Donzap@gmail.com",
+      "phone": "654164155"
+    },
+    {
+      "id": "8a5f",
+      "name": "Leonel ZANGUIM DONGMO",
+      "email": "leonelzanguim4@gmail.com",
+      "phone": "654164155"
+    },
+    {
+      "id": "86a3",
+      "name": "qqqqqqq",
+      "email": "aerqer@gmail.com",
+      "phone": "789456"
+    }
+  ]
+}

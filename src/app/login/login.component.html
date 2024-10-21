@@ -1,0 +1,77 @@
+
+     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="./" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="Logo-Type-pour-RS-02.png" class="h-40" alt="Premice Logo">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Premice</span>
+      </a>
+      <div class="flex md:order-2 items-center space-x-3">
+        <span class="text-sm">Vous n'avez pas de compte ?</span>
+        <button type="button"  [routerLink]="['/register']" class="text-blue-600 bg-blue-200 hover:bg-blue-300 rounded-lg text-sm px-4 py-2 dark:bg-gray-200 dark:hover:bg-blue-300">
+          s'inscrire
+        </button>
+      </div>
+    </div>
+<!--
+  <div class="  p-4 bg-white  rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-500 dark:border-gray-700">
+    <div class="h-screen bg-alice-blue m-5">
+      <div class="flex items-center justify-center w-full h-full">
+        <div class="bg-white bg-opacity-75 p-6 rounded-lg shadow-lg max-w-md w-full mx-4">
+
+          <h2 class="text-xl font-bold text-center mb-4">Connexion</h2>
+
+          <form (ngSubmit)="onSubmit()" class="max-w-md mx-auto mt-8">
+            <input
+              type="email"
+              name="email"
+              required
+              aria-label="Email"
+              placeholder="Votre Email"
+              class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border-b border-b-gray-300 focus:outline-none focus:ring-0 focus:border-blue-500"/>
+
+            <input
+              type="password"
+              name="password"
+              required
+              aria-label="Password"
+              placeholder="Mot de passe"
+              class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border border-0-0-0-1  rounded shadow appearance-none focus:outline-none focus:shadow-outline focus:border-blue-500"/>
+            <div class="dark:focus:ring-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              <button
+                type="submit"
+                class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline">
+                Se connecter
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div> -->
+
+<div class="container">
+  <mat-card class="login-form" [formGroup]="loginForm">
+    <mat-card-header>
+      <mat-card-title>
+        <mat-icon>lock</mat-icon> Connexion
+      </mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <mat-form-field appearance="outline" class="full-width-input">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="username" placeholder="Entrez votre email" required>
+        <mat-icon matSuffix>person_outline</mat-icon>
+        <mat-error *ngIf="loginForm.get('username')?.invalid">Email requis</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width-input">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="Entrez votre mot de passe" required>
+        <mat-icon matSuffix>lock_outline</mat-icon>
+        <mat-error *ngIf="loginForm.get('password')?.invalid">Mot de passe requis</mat-error>
+      </mat-form-field>
+      <div class="flex justify-center mt-4">
+        <button mat-raised-button color="primary" (click)="login()" class="w-100">Se connecter</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
